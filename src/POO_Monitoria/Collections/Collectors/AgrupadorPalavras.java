@@ -19,7 +19,6 @@ public class AgrupadorPalavras {
         
         System.out.println("\n Palavras: " + palavras);
         
-        // Contar palavras por tamanho
         Map<Integer, Long> contagemPorTamanho = palavras.stream()
             .collect(Collectors.groupingBy(String::length, Collectors.counting()));
         
@@ -27,7 +26,6 @@ public class AgrupadorPalavras {
         contagemPorTamanho.forEach((tamanho, count) -> 
             System.out.println(tamanho + " letras: " + count + " palavra(s)"));
         
-        // Juntar palavras grandes em uma string
         String palavrasGrandes = palavras.stream()
             .filter(p -> p.length() > 4)
             .collect(Collectors.joining(", ", "Palavras grandes: [", "] \n"));
