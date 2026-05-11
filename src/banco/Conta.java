@@ -34,6 +34,7 @@ class Conta {
         Integer valorCompraEmCentavos = valorCompra.intValue();
         Integer valorParcela = valorCompraEmCentavos / qtdeParcelas;
         Integer acrescimoPrimeiraParcela = valorCompraEmCentavos % qtdeParcelas;
+        
         for (int i = 1; i <= qtdeParcelas; i++) {
             Integer valorPagar = valorParcela;
             if (i == 1) {
